@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(255, 0, 0, 0.651);
+    /* background: url(../IMG/Picture1.png); */
+    background-repeat: no-repeat;
+}
+.nav-body{
+    margin-left: 500px !important;
+    border-radius: 10px;
+}
+.btn-outline-danger{
+    padding: 10px 140px !important;
+    border-radius: 5px;
+}
+.btn-link{
+    text-decoration: none;
+    color: black;
+}
+.btn-link:hover{
+    color: white;
+}

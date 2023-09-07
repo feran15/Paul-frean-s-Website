@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/js/bootstrap.js">
+    <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+<style>
+    .success,
+    .error {
+        color: white;
+        padding: 5px;
+        margin: 5px 0 15px 0;
+    }
+
+    .success {
+        background: green;
+
+    }
+
+    .error {
+        background: yellow;
+    }
+    .log-link{
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="nav-header mt-5">
+        <div class="container  p-3 w-50 mt-5" id="container">
+            <h3 class=" create text-white text-center">Create Your Account</h3>
+            <span class="d-flex gap-3">
+                <form action="" method="get">
+                    <input id="first" type="text" class="form-control w-50 p-2  mt-3" required placeholder="First Name">
+                    <div class="invalid-request">
+                        Name must be between 2 and 10 characters
+                    </div>
+                </form>
+                <form action="" method="get">
+                    <input id="last" type="text" class="form-control w-50 p-2  mt-3" required placeholder="Last Name">
+                    <div class="invalid-request">
+                        Name must be between 2 and 10 characters
+                    </div>
+                </form>
+                <form action="" method="get">
+                    <input id="use" type="text" class="form-control w-50 p-2 mt-3" required placeholder="User Name">
+                </form>
+            </span>
+            <span class="d-flex gap-3">
+                <form action="" method="get">
+                    <input data-testid="email-input" required="required" type="email" placeholder="Email Address"
+                        class="form-control p-2 w-50 mt-3" title="Email is required" id="email">
+                </form>                                                 
+                <div class="invalid-request">
+                    Enter a valid email
+                </div>
+                <form action="" method="get">
+                    <input id="age" type="number" class="form-control w-50 p-2  mt-3 " required placeholder="Age">
+                </form>
+                <form action="" method="get">
+                    <input id="pass" type="password" class="form-control w-50 p-2  mt-3" required
+                        placeholder="password">
+                        
+                </form>
+            </span>
+            <div class="authenticate d-flex ms-5">
+                <input class="box mt-4 ms-3" type="checkbox" id="checked" required>
+                <h6 class="agree mt-4 ms-3 text-white">I Agree to the Terms & Conditions laid down by this company</h6>
+            </div>
+            <h6 class="text-center text-white mt-2">Already have an account?<a class="log-link p-1 fs-5" href="./login.html">Log in</a></h6>
+            <a href="../HTML/Home.html"><button class="btn-rounded btn-primary p-5 mt-4 ms-5" id="button" onclick="handleSubmit()">Sign
+                    In</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../JS/signup.js"></script>

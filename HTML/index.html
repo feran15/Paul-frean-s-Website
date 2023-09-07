@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <div class="nav-header">
+        <h4>color flipper</h4>
+        <ul class="nav-links">
+            <li>
+                <a class="link-list" href="index.html">simple</a>
+            </li>
+            <li>
+                <a class="link-list" href="hex.html">hex</a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div class="container">
+            <h2 class="color-item">background color : <span class="color">
+                #f1f5f8
+            </span>
+        </h2>
+            <button class="btn btn-hero" id="btn">Click me</button>
+        </div>
+    </main>
+
+
+
+
+    <form id="signup-form">
+        <input type="text" id="first" placeholder="First Name">
+        <input type="text" id="last" placeholder="Last Name">
+        <input type="text" id="use" placeholder="Username">
+        <input type="password" id="pass" placeholder="Password">
+        <button type="submit" id="button" disabled>Sign Up</button>
+    </form>
+    
+</body>
+    <script>
+        const firstInput = document.getElementById('first');
+const lastInput = document.getElementById('last');
+const usernameInput = document.getElementById('use');
+const passwordInput = document.getElementById('pass');
+const signupButton = document.getElementById('button');
+
+function validateSignupButton() {
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+
+    const isUsernameValid = username.length >= 3; // Example validation
+    const isPasswordValid = password.length >= 8; // Example validation
+
+    const isFormValid = isUsernameValid && isPasswordValid;
+
+    signupButton.disabled = !isFormValid;
+}
+
+usernameInput.addEventListener('input', validateSignupButton);
+passwordInput.addEventListener('input', validateSignupButton);
+
+document.getElementById('signup-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Perform signup logic here
+});
+
+    </script>
+<script src="../JS/index.js"></script>
+</html>
